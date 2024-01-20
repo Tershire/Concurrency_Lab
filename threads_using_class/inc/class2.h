@@ -10,8 +10,8 @@
 ...
 */
 
-#ifndef THREADSUSINGCLASS_CLASS1_H
-#define THREADSUSINGCLASS_CLASS1_H
+#ifndef THREADSUSINGCLASS_CLASS2_H
+#define THREADSUSINGCLASS_CLASS2_H
 
 #include "common.h"
 
@@ -30,13 +30,18 @@ public:
     // constructor & destructor ///////////////////////////////////////////////
     Class2();
 
+    // member methods /////////////////////////////////////////////////////////
+    bool initialize();
+    bool close();
+    
 private:
     // member data ////////////////////////////////////////////////////////////
+    std::thread thread_;
 
     // member methods /////////////////////////////////////////////////////////
-
+    bool run();
 };
 
 } // namespace threads_using_class
 
-#endif // THREADSUSINGCLASS_CLASS1_H
+#endif // THREADSUSINGCLASS_CLASS2_H

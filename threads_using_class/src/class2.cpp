@@ -21,8 +21,30 @@ namespace threads_using_class
 Class2::Class2() {}
 
 // member methods /////////////////////////////////////////////////////////////
-// bool Class1::initialize()
-// {
-// }
+bool Class2::initialize()
+{
+    thread_ = std::thread(&Class2::run, this);
+    
+    return true;
+}
+
+// ----------------------------------------------------------------------------
+bool Class2::close()
+{
+    thread_.join();
+
+    return true;
+}
+
+// ----------------------------------------------------------------------------
+bool Class2::run()
+{
+    while (true)
+    {
+        std::cout << "2";
+    }
+
+    return true;
+}
 
 } // namespace threads_using_class
