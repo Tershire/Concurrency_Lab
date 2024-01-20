@@ -34,12 +34,14 @@ public:
     bool initialize();
     bool close();
 
+    bool run();
+
 private:
     // member data ////////////////////////////////////////////////////////////
     std::thread thread_;
 
     // member methods /////////////////////////////////////////////////////////
-    bool run();
+    // bool task();
 };
 
 } // namespace threads_using_class
