@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(Threading)
+project(basic)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
